@@ -11,11 +11,22 @@ public class ArrayNilai26 {
             nilaiAkhir[i] = input.nextInt();
         }
 
+        int jmlLulus = 0;
+        int jmlTidakLulus = 0;
+
         for (int i = 0; i < nilaiAkhir.length; i++) {
+            String status = (nilaiAkhir[i] > 70) ? "LULUS" : "TIDAK LULUS";
+            System.out.println("Mahasiswa ke-" + (i + 1) + ": " + nilaiAkhir[i] + " (" + status + ")");
+
             if (nilaiAkhir[i] > 70) {
-                System.out.println("Mahasiswa ke-" + (i + 1) + ": " + nilaiAkhir[i] + " (LULUS)");
+                jmlLulus++;
+            } else {
+                jmlTidakLulus++;
             }
         }
+
+        System.out.println("Jumlah mahasiswa yang lulus      : " + jmlLulus);
+        System.out.println("Jumlah mahasiswa yang tidak lulus: " + jmlTidakLulus);
 
         input.close();
     }
