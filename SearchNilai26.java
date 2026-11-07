@@ -27,7 +27,10 @@ public class SearchNilai26 {
         }
 
         if (!ditemukan) {
-                System.out.println("Nilai " + key + " tidak ditemukan.");
+            System.out.println("--------------------------------------------------");
+            System.out.println("INFORMASI PENCARIAN:");
+            System.out.println("Maaf, nilai " + key + " TIDAK DITEMUKAN di dalam " + nilai.length + " data yang Anda masukkan.");
+            System.out.println("--------------------------------------------------");
         }
 
         input.close();
